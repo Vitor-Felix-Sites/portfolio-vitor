@@ -16,7 +16,6 @@
 <meta name="twitter:image" content="https://seudominio.com/imagem-compartilhamento.png" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<!-- Responsividade e outros -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="Desenvolvido por Vitor Felix" />
     <link href="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/css/advisortemplate.webflow.4facbfac6.css" rel="stylesheet" type="text/css" />
@@ -47,8 +46,31 @@
             flex:0
         }
     }
-    
+    .shape-wrapper img{
+        filter: grayscale(100%);
+    }
+.header-transparent {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: transparent;
+    transition: all 0.3s ease;
+        background-color: #090F1D;
 
+}
+
+.header-scrolled {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.w--current{
+    color: rgb(0, 187, 255)!important;
+}
+    .list-nav-menu {
+        background-color: #090F1D!important;
+    }
+    .list-nav-menu a {
+        color: aliceblue;
+    }
 </style>
 <script defer>
 
@@ -59,14 +81,21 @@
       const openWhatsappUrl = () => {
         window.open('https://wa.me/558184867295', '_blank')
     }
- 
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header-transparent');
+        if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+        } else {
+        header.classList.remove('header-scrolled');
+        }
+    });
     
 </script>
 </head>
 
 <body>
     <div class="page-wrapper">
-        <div class="header-transparent">
+        <div class="header-transparent" >
             <div data-w-id="4d01b41b-b2c7-070e-d09b-feef6ec249ad" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-wrapper w-nav">
                 <div data-w-id="4d01b41b-b2c7-070e-d09b-feef6ec249ae" class="container-default w-container">
                     <div class="header-content-wrapper">
@@ -75,7 +104,7 @@
                             class="header-middle ">
                             <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
                                 <ul role="list" class="list-nav-menu">
-                                    <li class="link-nav-item"><a href="#" class="header-nav-link text-light text-titles-tablet w-nav-link">Home</a></li>
+                                    <li class="link-nav-item"><a href="#inicio" class="header-nav-link text-light text-titles-tablet w-nav-link">Home</a></li>
                                     <li class="link-nav-item"><a href="#servicos" class="header-nav-link text-light text-titles-tablet w-nav-link">Serviços</a></li>
                                     <li class="link-nav-item"><a href="#diferenciais" class="header-nav-link text-light text-titles-tablet w-nav-link">Diferenciais</a></li>
                                     <li class="link-nav-item"><a href="#criacao" class="header-nav-link text-light text-titles-tablet w-nav-link">Processo de criação</a></li>
@@ -93,7 +122,7 @@
         </div>
     </div>
     </div>
-    <section class="section hero v3">
+    <section class="section hero v3" id="inicio">
         <div class="w-layout-blockcontainer container-default w-container">
             <div class="inner-section v3-inner-section">
                 <div class="w-layout-grid grid-2-columns hero-v3-grid">
@@ -153,11 +182,11 @@
             <div class="mg-top-long">
                 <div class="w-layout-grid grid-1-column gap-row-28px">
                     <div class="w-layout-grid grid-2-columns gap-28px">
-                        <a data-w-id="73958d01-4563-5fc2-305d-971fad398ae4" style="opacity:0;  border: 1px solid rgba(0, 0, 0, 0.3); border-radius: 8px;" href="/services-pages/services" class="card service-item bg-color-default w-inline-block">
+                        <a data-w-id="73958d01-4563-5fc2-305d-971fad398ae4" style="opacity:0;  border: 1px solid rgba(0, 0, 0, 0.3); border-radius: 8px;" href="#" onclick="openWhatsappUrl()" class="card service-item bg-color-default w-inline-block">
                             <div class="inner-container _442px _100-tablet">
                                 <h3 class="card-heading display-3">Sites</h3>
                                 <p class="color-neutral-700 mg-top-small">Construímos seu site com estratégia, sites pensados para gerar resultado, projetos feitos sob medida.<span class="text-no-wrap"></span></p>
-                            </div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663562d3e7b7f14a499eda7f_business-planning-icon-advisor-x-webflow-template.svg" loading="eager" alt="Business Planing Icon - Advisor X Webflow Template"
+                            </div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663562d3e7b7f14a499eda7f_business-planning-icon-advisor-x-webflow-template.svg" loading="eager" alt="Shape"
                                 class="image-size _40px" />
                             <div class="btn-absolute">
                                 <div class="btn-circle-primary dark-mode">
@@ -165,11 +194,11 @@
                                 </div>
                             </div>
                         </a>
-                        <a data-w-id="6b7bf609-7c5e-30e5-0cc0-0796738a948c" style="opacity:0;  border: 1px solid rgba(0, 0, 0, 0.3); border-radius: 8px;" href="/services-pages/services" class="card service-item bg-color-default w-inline-block">
+                        <a data-w-id="6b7bf609-7c5e-30e5-0cc0-0796738a948c" style="opacity:0;  border: 1px solid rgba(0, 0, 0, 0.3); border-radius: 8px;" href="#" onclick="openWhatsappUrl()"  class="card service-item bg-color-default w-inline-block">
                             <div class="inner-container _442px _100-tablet">
                                 <h3 class="card-heading display-3">Web design</h3>
                                 <p class="color-neutral-700 mg-top-small">Criação do design do site: desde os wireframes de baixa fidelidade até a versão final visual e funcional. <span class="text-no-wrap">.</span></p>
-                            </div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663562cf334b030060b72776_sales-strategy-icon-advisor-x-webflow-template.svg" loading="eager" alt="Sales Strategy Icon - Advisor X Webflow Template" class="image-size _40px"
+                            </div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663562cf334b030060b72776_sales-strategy-icon-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _40px"
                             />
                             <div class="btn-absolute">
                                 <div class="btn-circle-primary dark-mode">
@@ -196,13 +225,13 @@
         <div class="bg-content why-me-bg-content">
             <div class="shape-wrapper bottom-left why-me-bottom-left">
                 <div data-w-id="32633704-7ebb-2f28-2e67-58d335bb5322" style="opacity:0" class="w-layout-grid shape-grid hidden-on-mbl">
-                    <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a45808e1ffc1870827_yellow-bottom-left-image-advisor-x-webflow-template.svg" loading="eager" alt="Yellow Bottom Left Image - Advisor X Webflow Template" class="image-size _144px"
+                    <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a45808e1ffc1870827_yellow-bottom-left-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                         /></div>
-                    <div class="opacity-none"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a5b4d8a1407435003a_yellow-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Yellow Bottom Right Image - Advisor X Webflow Template" class="image-size _144px"
+                    <div class="opacity-none"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a5b4d8a1407435003a_yellow-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                         /></div>
-                    <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a4dc5c8cc749afff25_skyblue-top-left-image-advisor-x-webflow-template.svg" loading="eager" alt="Skyblue Top Left Image - Advisor X Webflow Template" class="image-size _144px"
+                    <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a4dc5c8cc749afff25_skyblue-top-left-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                         /></div>
-                    <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a12886b94e41a15da5_blue-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Skyblue Bottom Right Image - Advisor X Webflow Template" class="image-size _144px"
+                    <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a12886b94e41a15da5_blue-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                         /></div>
                 </div>
             </div>
@@ -241,7 +270,7 @@
                             </div>
                         </div>
                         <div id="w-node-d762f5c5-348d-f653-d982-955c54f51587-518346de" data-w-id="d762f5c5-348d-f653-d982-955c54f51587" style="opacity:0" class="full-width-wrapper image-right-grid">
-                            <div class="full-width-right image-right-grid---item"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663e3f6ca6760b8d17733a0d_working-towards-one-single-goal-image-advisor-x-webflow-template.jpg" loading="eager" alt="Why Me Image - Advisor X Webflow Template"
+                            <div class="full-width-right image-right-grid---item"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663e3f6ca6760b8d17733a0d_working-towards-one-single-goal-image-advisor-x-webflow-template.jpg" loading="eager" alt="Shape"
                                     class="fit-cover _w-h-100 image-right-grid---image" /></div>
                         </div>
                     </div>
@@ -272,7 +301,7 @@
                     </a>
                 </div>
             </div>
-            <div data-w-id="e530cb69-f7de-8c40-b18a-cd1a7caeee25" style="opacity:0" class="mg-top-long"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663e3f6b64cce70422092422_our-process-image-advisor-x-webflow-template.jpg" loading="eager" alt="Our Process Image - Advisor X Webflow Template" class="fit-cover _w-h-100 responsive---mbl"
+            <div data-w-id="e530cb69-f7de-8c40-b18a-cd1a7caeee25" style="opacity:0" class="mg-top-long"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663e3f6b64cce70422092422_our-process-image-advisor-x-webflow-template.jpg" loading="eager" alt="Shape" class="fit-cover _w-h-100 responsive---mbl"
                 /></div>
             <div class="mg-top-extra-large">
                 <div class="w-layout-grid grid-3-columns process-grid">
@@ -308,23 +337,23 @@
         </div>
         <div class="shape-wrapper bottom-right process-bottom-right">
             <div data-w-id="ba316ff4-bda2-3089-971e-8c8cc48f09c6" style="opacity:0" class="w-layout-grid shape-grid hidden-on-mbl">
-                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a4dc5c8cc749afff25_skyblue-top-left-image-advisor-x-webflow-template.svg" loading="eager" alt="Skyblue Top Left Image - Advisor X Webflow Template" class="image-size _144px"
+                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a4dc5c8cc749afff25_skyblue-top-left-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                     /></div>
-                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a2ade5ab44f2b76a64_blue-top-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Blue Top Right Image - Advisor X Webflow Template" class="image-size _144px"
+                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a2ade5ab44f2b76a64_blue-top-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                     /></div>
                 <div class="opacity-none"></div>
-                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a5bfb905373278f90f_yellow-top-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Top Right Image - Advisor X Webflow Template" class="image-size _144px"
+                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a5bfb905373278f90f_yellow-top-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                     /></div>
             </div>
         </div>
         <div class="shape-wrapper bottom-left process-bottom-left">
             <div data-w-id="e52853a2-09f1-a9f2-502c-8be7c7bed110" style="opacity:0" class="w-layout-grid shape-grid hidden-on-mbl">
-                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a5bfb905373278f90f_yellow-top-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Top Right Image - Advisor X Webflow Template" class="image-size _144px"
+                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a5bfb905373278f90f_yellow-top-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                     /></div>
-                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a2ade5ab44f2b76a64_blue-top-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Blue Top Right Image - Advisor X Webflow Template" class="image-size _144px"
+                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a2ade5ab44f2b76a64_blue-top-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                     /></div>
                 <div class="opacity-none"><img src="https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="eager" alt="" class="image-size _144px" /></div>
-                <div class="opacity-none"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a12886b94e41a15da5_blue-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Skyblue Bottom Right Image - Advisor X Webflow Template" class="image-size _144px"
+                <div class="opacity-none"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a12886b94e41a15da5_blue-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                     /></div>
             </div>
         </div>
@@ -470,12 +499,12 @@
         </div>
         <div class="shape-wrapper">
             <div data-w-id="1d34f492-0118-6f9d-ea2d-d3265062e7d8" class="w-layout-grid shape-grid">
-                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a3ffaa28159d53eeb6_skyblue-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Skyblue Bottom Right Image - Advisor X Webflow Template" class="image-size _144px"
+                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a3ffaa28159d53eeb6_skyblue-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                     /></div>
-                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a5b4d8a1407435003a_yellow-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Yellow Bottom Right Image - Advisor X Webflow Template" class="image-size _144px"
+                <div><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a5b4d8a1407435003a_yellow-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                     /></div>
-                <div class="opacity-none hidden-on-mbl"><img src="https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="eager" alt="" class="image-size _144px" /></div>
-                <div class="hidden-on-mbl"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a12886b94e41a15da5_blue-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Skyblue Bottom Right Image - Advisor X Webflow Template" class="image-size _144px"
+                <div class="opacity-none hidden-on-mbl"><img src="https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="eager" alt="Shape" class="image-size _144px" /></div>
+                <div class="hidden-on-mbl"><img src="https://cdn.prod.website-files.com/6634faa6d172a114f974d83b/663921a12886b94e41a15da5_blue-bottom-right-image-advisor-x-webflow-template.svg" loading="eager" alt="Shape" class="image-size _144px"
                     /></div>
             </div>
         </div>
