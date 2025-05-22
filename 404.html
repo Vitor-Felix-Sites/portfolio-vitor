@@ -5,25 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Página não encontrada</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background: #090f1d;
-      color: white;
-      font-family: sans-serif;
+      background-color: #090F1D;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      padding: 100px;
+      padding: 0 20px;
     }
+
     h1 {
-      font-size: 4em;
+      font-size: 6rem;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
+
+    p {
+      font-size: 1.25rem;
+      color: #cccccc;
+      margin-bottom: 40px;
+    }
+
     a {
-      color: #ff5c5c;
+      background-color: #1E90FF;
+      color: #ffffff;
+      padding: 16px 32px;
+      border-radius: 8px;
       text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #0070f3;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      a {
+        padding: 12px 24px;
+      }
     }
   </style>
 </head>
 <body>
   <h1>404</h1>
-  <p>Página não encontrada 😢</p>
-  <p><a href="/">Voltar para o início</a></p>
+  <p>Ops! Esta página não existe.</p>
+  <a href="/">Voltar para o início</a>
 </body>
 </html>
